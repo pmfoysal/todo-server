@@ -20,6 +20,12 @@ async function runDatabase() {
       await client.connect();
       const todos = client.db('todolist').collection('todos');
 
+      app.post('/todos', async (req, res) => {
+         const data = req.body;
+         const result = await todos.insertOne(data);
+         res.send(result);
+      });
+
       app.get('/todos', async (req, res) => {
          const query = {};
          const data = await todos.find(query).toArray();
