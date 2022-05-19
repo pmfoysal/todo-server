@@ -1,0 +1,19 @@
+{
+   "name": "todo-server",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "devDependencies": {},
+   "scripts": {
+      "start": "node index.js",
+      "serve": "nodemon index.js"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "cors": "^2.8.5",
+      "mongodb": "^4.6.0",
+      "nodemon": "^2.0.16"
+   }
+}
